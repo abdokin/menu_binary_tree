@@ -4,13 +4,12 @@
 
 struct tree
 {
-    int v;
+    int value;
     struct tree * left;
     struct tree * right;
 
 };
 typedef struct tree * ptree;
-
 #endif // MACRO
 
 
