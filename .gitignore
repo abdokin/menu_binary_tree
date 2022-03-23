@@ -1,2 +1,2 @@
-# ignore all  banary file named main :@
-main
+# ignore all  file in the build folder :@
+build/*
