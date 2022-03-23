@@ -1,0 +1,27 @@
+compilling
+im working ...
+done creating the left
+done creating the left
+done creating the left
+0
+left
+	2
+	left
+		10
+		left
+		NULL
+	right:
+		20
+		left
+		NULL
+right:
+	985684432
+	left
+	30
+	left
+	NULL
+	right:
+				40
+		left
+		NULL
+done 

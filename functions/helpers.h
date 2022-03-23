@@ -25,15 +25,6 @@ void add_left(int v,ptree father,int x){
     }
 
 }
-// void add_right(int v,ptree father){
-//     // if(father->right ==NULL) 
-//     ptree q = create_n();
-//     if(q ==NULL) printf("error allocation the left node");
-//     q->value = v;
-//     printf("p =%d\n",q->value);
-    
-//     father->right = q;
-// }
 ptree search(int v,ptree l){
   if(l!=NULL){
         if(l->value == v) return l;
@@ -62,8 +53,8 @@ void printTree_rec(ptree l,int lev){
     printf("%d\n",l->value);
     level(lev);
     printf("left\n");
-    lev++;
-    if(l->left != NULL) printTree_rec(l->left,lev);
+    
+    if(l->left != NULL) printTree_rec(l->left,++lev);
     else  
     {
         level(lev);
