@@ -25,4 +25,12 @@ ptree search(int v,ptree l){
     }
   }
 }
+// print the tree 
+void printTree(ptree l){
+   if(l !=NULL){
+    printf("%d\n",l->v);
+    printTree(l->left);
+    printTree(l->right);
+   }
+}
 #endif
