@@ -11,10 +11,10 @@ ptree create(int v){
 }
 
 void add_left(int v,ptree father){    
-    if(father->left !=NULL) father->left = create(v);
+    if(father->left ==NULL) father->left = create(v);
 }
 void add_right(int v,ptree father){
-    if(father->right !=NULL) father->right = create(v);
+    if(father->right ==NULL) father->right = create(v);
 }
 ptree search(int v,ptree l){
   if(l!=NULL){
@@ -33,4 +33,5 @@ void printTree(ptree l){
     printTree(l->right);
    }
 }
+
 #endif
