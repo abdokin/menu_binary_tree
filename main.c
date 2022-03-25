@@ -9,7 +9,7 @@ int main(){
     ptree root = create_n(),curr_father=root;
     int choice = menu(),v;
     printf("you choose :%d\n",choice);
-    while(choice !=5){
+    while(choice !=9){
         switch(choice){
             case 1:
                 printf("creating the root of the tree\n");
@@ -41,7 +41,7 @@ int main(){
                 break;
             case 5:
                 printf("going to the father of this child \n");
-                curr_father =up(curr_father);
+                curr_father =up(curr_father,root);
                 break;
             case 6:
                 printf("going to the father of this child \n");

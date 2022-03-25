@@ -31,14 +31,21 @@ void add_left(int v,ptree father,int x){
 		return;
 	}
 }
-ptree up(ptree child){
-    return child->father;
+ptree up(ptree child,ptree root){
+    if(child != root){
+        return child->father;
+    }else return NULL;
 }
 ptree down_left(ptree father){
-    return father->left;
+    if(father->left != NULL){
+        return father->left;
+    }else return NULL;
 }
 ptree down_right(ptree father){
-    return father->right;
+    if(father->right !=NULL) {
+        return father->right;
+    }
+    return NULL;
 }
 void level(int v){
 	int i;
