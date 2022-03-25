@@ -6,7 +6,7 @@
 
 int main(){
     printf("im working ...\n");
-    ptree root = create_n(),curr_left=root,curr_right=root;
+    ptree root = create_n(),curr_father=root;
     int choice = menu(),v;
     printf("you choose :%d\n",choice);
     while(choice !=5){
@@ -20,28 +20,41 @@ int main(){
                 break;
             case 2:
                 printf("creating left child\n");
-                printf(" the current parent is %d",curr_left->value);
+                printf(" the current parent is %d\n",curr_father->value);
                 printf("please eneter value of the left child  :");
                 scanf("%d",&v);
-                add_left(v,curr_left,1);
-                curr_left = curr_left->left;
-                printf("child added on the left with value %d",curr_left->value);
+                add_left(v,curr_father,1);
+                printf("child added on the left with value %d\n",curr_father->value);
                 break;
             case 3:
                 printf("creating the right child\n");
                  printf("creating left child\n");
-                printf(" the current parent is %d",curr_right->value);
+                printf(" the current parent is %d\n",curr_father->value);
                 printf("please eneter value of the left child  :");
                 scanf("%d",&v);
-                add_left(v,curr_right,2);
-                curr_right = curr_right->right;
-                printf("child added on the right with value %d",curr_right->value);
+                add_left(v,curr_father,2);
+                printf("child added on the right with value %d\n",curr_father->value);
                 break;
             case 4:
                 printf("printing the tree \n");
                 printTree(root,0);
                 break;
             case 5:
+                printf("going to the father of this child \n");
+                curr_father =up(curr_father);
+                break;
+            case 6:
+                printf("going to the father of this child \n");
+                curr_father =down_left(curr_father);
+                break;
+            case 7:
+                printf("going to the father of this child \n");
+                curr_father =down_right(curr_father);
+                break;
+            case 8:
+                printf("the current father is %d \n", curr_father->value);
+                break;
+            case 9:
                 printf("bye for the next time :\n");
                 break;
             default:

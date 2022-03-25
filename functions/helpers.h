@@ -1,42 +1,48 @@
 #include "../data/struct.h"
 #include <stdlib.h>
-#include <stdlib.h>
-
+//#include <stdlib.h>
+#include <stdio.h>
 
 #ifndef HELPERS
 #define HELPERS 
 ptree create_n(){
     ptree binary = (ptree)malloc(sizeof(ptree));
+    if(binary ==NULL){
+        printf("ERROR");
+        return NULL;
+    }
     binary->value = 0;
-    // binary->left = NULL;
-    // binary->right = NULL;
+    binary->left =(ptree) NULL;
+    binary->right = (ptree)NULL;
+    binary->father =(ptree)NULL;
     return binary;
 }
 
 void add_left(int v,ptree father,int x){    
-
     ptree q = create_n();
     if(q ==NULL) printf("error allocation the left node");
     q->value = v;
     if(x==1) {father->left = q;
-    printf("done creating the left\n");
+    q->father =father;
     }
-    else {father->right = q;
-    }
-
+    else if(x == 2) {father->right = q;
+    q->father =father;
+	}else{
+		return;
+	}
 }
-ptree search(int v,ptree l){
-  if(l!=NULL){
-        if(l->value == v) return l;
-    else {
-        search(v,l->left);
-        search(v,l->right);
-    }
-  }
-  return NULL;
+ptree up(ptree child){
+    return child->father;
+}
+ptree down_left(ptree father){
+    return father->left;
+}
+ptree down_right(ptree father){
+    return father->right;
 }
 void level(int v){
-    for(int i=0;i<v;i++){
+	int i;
+    for( i=0;i<v;i++){
         printf("\t");
     }
 }
