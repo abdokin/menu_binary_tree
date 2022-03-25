@@ -1,4 +1,4 @@
 # ignore all  file in the build folder :@
 build/*
-*vscode
+*.vscode
 tests
