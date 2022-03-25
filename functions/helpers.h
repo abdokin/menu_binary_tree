@@ -35,43 +35,48 @@ ptree search(int v,ptree l){
   }
   return NULL;
 }
-// print the tree 
-void level(int lev){
-    for (int i = 0; i < lev; i++)
-    {
+void level(int v){
+    for(int i=0;i<v;i++){
         printf("\t");
     }
-    
 }
-void printTree_rec(ptree l,int lev){
-    if(l == NULL){
-        level(lev);
-        printf("----<empty>---\n");
-        return;
-    }
-    level(lev);
-    printf("%d\n",l->value);
-    level(lev);
-    printf("left\n");
-    
-    if(l->left != NULL) printTree_rec(l->left,++lev);
-    else  
-    {
-        level(lev);
+
+void printTree(ptree l,int v){
+    if(l == NULL ){
+        level(v);
         printf("NULL\n");
         return;
     }
-    level(lev);
-    printf("right:\n");
-    level(lev);
-    if(l->right != NULL) printTree_rec(l->right,lev);
-    else  
-    {
-        level(lev);
-        printf("NULL\n");
-        return;    }    
+    printf("%d\n", l->value);
+
+    if( l->right != NULL && l->left !=NULL){
+            level(++v);
+            printf("left :");
+            printTree(l->left,v);
+            level(v);
+            printf("right :");
+            printTree(l->right,v);
+    }else if ( l->right ==NULL && l->left ==NULL  ){
+            level(++v);
+            printf("left NULL\n");
+             level(v);
+            printf("right NULL\n");
+    }else{
+           if(l->left == NULL){
+            level(++v);
+            printf("left null \n");
+            level(v);
+            printf("right :");
+            printTree(l->right,v);
+    }
+    if(l->right == NULL){
+        level(++v);
+        printf("right null\n");
+        level(v);
+        printf("left :");
+        printTree(l->left,v);
+    }
+    }
 }
-void printTree(ptree l){
-    printTree_rec(l,0);
-}
+
 #endif
