@@ -1,3 +1,7 @@
 # menu_binary_tree
-programm to create_n binary tree and cutumize it in c
-# 0 -> 1,2 ->(3,4),(5,7)
+
+## implementation of binary tree in c
+
+    create menu of choices:
+        the programme can create tree and customize it;
+        its quite simple,its still under process actually not done yet;
