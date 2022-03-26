@@ -24,7 +24,7 @@ int main(){
                 printf("please eneter value of the left child  :");
                 scanf("%d",&v);
                 add_left(v,curr_father,1);
-                printf("child added on the left with value %d\n",curr_father->value);
+                printf("child added on the left with value %d\n",curr_father->left->value);
                 break;
             case 3:
                 printf("creating the right child\n");
