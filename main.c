@@ -33,7 +33,7 @@ int main(){
                 printf("please eneter value of the left child  :");
                 scanf("%d",&v);
                 add_left(v,curr_father,2);
-                printf("child added on the right with value %d\n",curr_father->value);
+                printf("child added on the right with value %d\n",curr_father->right->value);
                 break;
             case 4:
                 printf("printing the tree \n");
@@ -45,11 +45,13 @@ int main(){
                 break;
             case 6:
                 printf("going to the father of this child \n");
-                curr_father =down_left(curr_father);
+                ptree p =down_left(curr_father);
+                if (p !=NULL) curr_father = p;else printf("the left child already NULL");
                 break;
             case 7:
                 printf("going to the father of this child \n");
-                curr_father =down_right(curr_father);
+                ptree p =down_right(curr_father);
+                if (p !=NULL) curr_father = p;else printf("the rightÆ» child already NULL");
                 break;
             case 8:
                 printf("the current father is %d \n", curr_father->value);
