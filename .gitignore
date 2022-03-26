@@ -2,3 +2,9 @@
 build/*
 *.vscode
 tests
+gmon.out
+.vs/ProjectSettings.json
+.vs/menu_binary_tree/v17/.suo
+.vs/menu_binary_tree/v17/Browse.VC.db
+functions/helpers.h.gch
+main

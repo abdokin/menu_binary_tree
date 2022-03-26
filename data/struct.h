@@ -5,9 +5,7 @@
 struct tree
 {
     int value;
-    struct tree * left;
-    struct tree * right;
-
+    struct tree * left, * right, * father;
 };
 typedef struct tree * ptree;
 #endif // MACRO
