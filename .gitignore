@@ -1,6 +1,7 @@
 # ignore all  file in the build folder :@
 build/*
 *.vscode
+*.vs
 tests
 gmon.out
 .vs/ProjectSettings.json
