@@ -41,7 +41,8 @@ int main(){
                 break;
             case 5:
                 printf("going to the father of this child \n");
-                curr_father =up(curr_father,root);
+                ptree p2=up(curr_father,root);
+                if(p2 != NULL ) curr_father =p2;else printf("error going up to the father try again\n");
                 break;
             case 6:
                 printf("going to the father of this child \n");

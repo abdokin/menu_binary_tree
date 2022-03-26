@@ -7,11 +7,11 @@
 #define HELPERS 
 ptree create_n(){
     ptree binary = (ptree)malloc(sizeof(ptree));
-    if(binary ==NULL){
+    if(binary ==NULL ){
         printf("ERROR");
         return NULL;
     }
-    binary->value = 0;
+    binary->value = -1;
     binary->left =(ptree) NULL;
     binary->right = (ptree)NULL;
     binary->father =(ptree)NULL;
