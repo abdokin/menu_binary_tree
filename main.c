@@ -50,8 +50,8 @@ int main(){
                 break;
             case 7:
                 printf("going to the father of this child \n");
-                ptree p =down_right(curr_father);
-                if (p !=NULL) curr_father = p;else printf("the rightÆ» child already NULL");
+                ptree p1 =down_right(curr_father);
+                if (p1 !=NULL) curr_father = p1;else printf("the rightÆ» child already NULL");
                 break;
             case 8:
                 printf("the current father is %d \n", curr_father->value);
