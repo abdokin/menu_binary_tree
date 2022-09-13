@@ -38,5 +38,5 @@
             left NULL
             right NULL
  ## png formate
-    ![alt text](https://github.com/abdokin/menu_binary_tree/blob/main/file.png?raw=true)
+    ![alt text](file.png)
 
