@@ -39,6 +39,6 @@
             right NULL
  ## png formate
     <p align="center">
-       <img src="file.png" width="350" title="hover text">
+       <img src="./file.png" width="350" title="hover text">
     </p>
 
