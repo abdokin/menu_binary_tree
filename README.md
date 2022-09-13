@@ -37,3 +37,6 @@
         right :7
             left NULL
             right NULL
+ ## png formate
+    ![alt text](https://github.com/abdokin/menu_binary_tree/blob/main/file.png)
+
