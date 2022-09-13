@@ -38,5 +38,7 @@
             left NULL
             right NULL
  ## png formate
-    ![Screenshot](file.png)
+    <p align="center">
+       <img src="file.png" width="350" title="hover text">
+    </p>
 
