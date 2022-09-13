@@ -1,5 +1,7 @@
 # menu_binary_tree
-
+## todo 
+    1. Create search functionality 
+    2. Create visualisation 
 ## implementation of binary tree in c
 
     create menu of choices:
@@ -17,6 +19,7 @@ Menu items select one by enetering valide integer :]
     7. enter right child               :7
     8. the current father              :8
     9. exit programme                  :9
+
 
 ## outpute
     1
