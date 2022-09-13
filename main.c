@@ -3,6 +3,11 @@
 #include "functions/helpers.h"
 #include "functions/menu/index.h"
 #include <stdlib.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#include <errno.h>
+#include <stdlib.h>
 int main(){
     printf("im working ...\n");
     ptree root = create_n(),curr_father=root;
@@ -35,10 +40,15 @@ int main(){
                 printf("child added on the right with value %d\n",curr_father->right->value);
                 break;
             case 4:
-                printf("printing the tree \n");
-                FILE *ptr = fopen("tree.txt","w");
-                printTree(root,0,ptr);
+                printf("Dump tree to gv file for visualsation  \n");
+                FILE *ptr = fopen("data/tree-graph.gv","w");
+                // printTree(root,0,ptr);
+                fprintf(ptr,"digraph G {\n");
+                dumpTree(root,ptr);
+                fprintf(ptr,"}\n");
                 fclose(ptr);
+                printf("file saved to data/tree-graph.vg\n");
+                system("dot -Tpng data/tree-graph.gv -o file.png");
                 break;
             case 5:
                 printf("going to the father of this child \n");

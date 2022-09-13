@@ -53,6 +53,18 @@ void level(int v){
         printf("\t");
     }
 }
+void dumpTree(ptree l, FILE *ptr){
+    if(l != NULL){
+        if(l->right != NULL) {
+            fprintf(ptr,"%d -> %d\n",l->value,l->right->value);
+        }
+        if(l->right != NULL) {
+            fprintf(ptr,"%d -> %d\n",l->value,l->left->value);
+        }
+        dumpTree(l->right,ptr);
+        dumpTree(l->left,ptr);
+    }
+}
 void printTree(ptree l,int v, FILE *p){
     if(l == NULL ){
         level(v);
