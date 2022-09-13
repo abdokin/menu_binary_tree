@@ -1,6 +1,8 @@
 # menu_binary_tree
 ## tools :
-    code`brew install graphviz`
+    ```bash
+    brew install graphviz
+    ```
 ## todo 
     1. Create search functionality 
     2. Create visualisation 
