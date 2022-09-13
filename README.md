@@ -38,7 +38,7 @@
             left NULL
             right NULL
  ## png formate
-    <p align="center">
-       <img src="./file.png" width="350" title="hover text">
-    </p>
-
+ <p align="center">
+  <img src="https://raw.githubusercontent.com/abdokin/menu_binary_tree/main/file.png" width="350" title="hover text">
+</p>
+    
