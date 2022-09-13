@@ -38,5 +38,5 @@
             left NULL
             right NULL
  ## png formate
-    ![alt text](file.png)
+    ![alt text](./file.png)
 
