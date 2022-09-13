@@ -8,15 +8,15 @@
 
 ## interface 
 Menu items select one by enetering valide integer :] 
-    - create the tree                 :1
-    - create left  child              :2
-    - create right child              :3
-    - create remove  child            :4
-    - up for the father               :5
-    - enter left                      :6
-    - enter right child               :7
-    - the current father              :8
-    - exit programme                  :9
+    1. create the tree                 :1
+    2. create left  child              :2
+    3. create right child              :3
+    4. create remove  child            :4
+    5. up for the father               :5
+    6. enter left                      :6
+    7. enter right child               :7
+    8. the current father              :8
+    9. exit programme                  :9
 
 ## outpute
     1
