@@ -3,7 +3,6 @@
 #include "functions/helpers.h"
 #include "functions/menu/index.h"
 #include <stdlib.h>
-
 int main(){
     printf("im working ...\n");
     ptree root = create_n(),curr_father=root;
@@ -37,7 +36,9 @@ int main(){
                 break;
             case 4:
                 printf("printing the tree \n");
-                printTree(root,0);
+                FILE *ptr = fopen("tree.txt","w");
+                printTree(root,0,ptr);
+                fclose(ptr);
                 break;
             case 5:
                 printf("going to the father of this child \n");
@@ -65,15 +66,5 @@ int main(){
         }
         choice = menu();
     }
-    
-  
-    // add_left(2,l,2);
-    // add_left(3,l->left,1);
-    // add_left(4,l->left,2);
-    // add_left(5,l->right,1);
-    // add_left(7,l->right,2);
-    // add_right(2,l);
-    // printTree(l,0);
-    // printf("done ");
     return 0;
 }

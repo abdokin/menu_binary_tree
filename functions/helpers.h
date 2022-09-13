@@ -6,7 +6,7 @@
 #ifndef HELPERS
 #define HELPERS 
 ptree create_n(){
-    ptree binary = (ptree)malloc(sizeof(ptree));
+    ptree binary = (ptree)malloc(sizeof(struct tree));
     if(binary ==NULL ){
         printf("ERROR");
         return NULL;
@@ -53,41 +53,40 @@ void level(int v){
         printf("\t");
     }
 }
-
-void printTree(ptree l,int v){
+void printTree(ptree l,int v, FILE *p){
     if(l == NULL ){
         level(v);
-        printf("NULL\n");
+        fprintf(p,"NULL\n");
         return;
     }
-    printf("%d\n", l->value);
+    fprintf(p,"%d\n", l->value);
 
     if( l->right != NULL && l->left !=NULL){
             level(++v);
-            printf("left :");
-            printTree(l->left,v);
+            fprintf(p,"left :");
+            printTree(l->left,v,p);
             level(v);
-            printf("right :");
-            printTree(l->right,v);
+            fprintf(p,"right :");
+            printTree(l->right,v,p);
     }else if ( l->right ==NULL && l->left ==NULL  ){
             level(++v);
-            printf("left NULL\n");
+            fprintf(p,"left NULL\n");
              level(v);
-            printf("right NULL\n");
+            fprintf(p,"right NULL\n");
     }else{
            if(l->left == NULL){
             level(++v);
-            printf("left null \n");
+            fprintf(p,"left null \n");
             level(v);
-            printf("right :");
-            printTree(l->right,v);
+            fprintf(p,"right :");
+            printTree(l->right,v,p);
     }
     if(l->right == NULL){
         level(++v);
-        printf("right null\n");
+        fprintf(p,"right null\n");
         level(v);
-        printf("left :");
-        printTree(l->left,v);
+        fprintf(p,"left :");
+        printTree(l->left,v,p);
     }
     }
 }
